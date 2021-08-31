@@ -1,0 +1,19 @@
+.header > .header_display {
+    background-color: #141F97;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;   
+}
+.header_display > img, .side_section {
+    padding: .5rem 3rem;
+}
+
+.side_section > h4, p, img {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #C3C3C9;
+    // margin: 2rem;
+}
+
