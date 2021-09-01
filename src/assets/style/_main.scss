@@ -1,25 +1,51 @@
 .dash_background {
-    color: lightgrey;
+  color: lightgrey;
 }
 
 .main {
-    background-color: lightgrey;
-    width: 100%;
+  background-color: lightgrey;
+  width: 100%;
 }
 
 .main > .product_info {
-    background-color: #fff;
-    // width: 100%;
-    padding:3rem;
+  background-color: #fff;
+  // width: 100%;
+  padding: 3rem;
 }
 
 .product {
-    padding: 2rem;
-    // margin: 2rem;
+  padding: 2rem;
+  // margin: 2rem;
+}
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
-.main > .heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+.offer_tag {
+  background-color: #848ac5;
+  width: 100%;
+}
+.offer_tag > p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
+.cart_background {
+  background-color: #fff;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.t_head {
+  flex: 50%;
+  padding-left: 3rem;
+}
+
+.t_content {
+  flex: 50%;
+}

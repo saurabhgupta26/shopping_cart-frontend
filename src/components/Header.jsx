@@ -7,7 +7,7 @@ import IconCart from "../assets/icons/shopping.png";
 export default function Header() {
   return (
     <div className="header">
-      <section className="header_display d-flex justify-content-between align-items-center">
+      <section className="header_display d-sm-flex justify-content-between align-items-center">
         <a href="##" className="logo">
           <img src={Logo} alt="img" />
         </a>

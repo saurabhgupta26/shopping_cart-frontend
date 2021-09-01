@@ -1,31 +1,52 @@
 .divider {
-    border-left: 1px solid #fff;
-    height: auto;
+  border-left: 1px solid #fff;
+  height: auto;
 }
 
 .footer_background {
-    background-color: #212121;
-
+  background-color: #212121;
 }
 
 .text-white > .h5 {
-    font-weight: 600;
+  font-weight: 600;
 }
-
 .foot_timing {
-    width: 240px;
+  width: 300px;
 }
 
 .foot_phone {
-    padding: 1rem 0;
-}
-
-.foot_phone > h4 {
-    font-family: 'Rajdhani', sans-serif;
+  padding: 1rem 0;
+  h4 {
+    font-family: "Rajdhani", sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    padding: .5rem;
-}
-.foot_phone > img {
+    padding: 0.5rem;
+  }
+  img {
     object-fit: contain;
+  }
+}
+.footer_end {
+  p {
+    height: 1rem;
+    border-right: 2px solid #c3c3c9;
+    margin: 0 10px;
+  }
+  h6 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .border {
+    margin: 2rem 0;
+  }
+}
+.footer_end {
+  background-color: #212121;
+}
+.footer_text {
+  text-align: right;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
 }
