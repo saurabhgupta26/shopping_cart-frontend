@@ -1,19 +1,30 @@
+.header {
+  background-color: #141f97;
+}
+
 .header > .header_display {
-    background-color: #141F97;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
-    text-decoration: none;   
+  text-decoration: none;
 }
-.header_display > img, .side_section {
-    padding: .5rem 3rem;
-}
-
-.side_section > h4, p, img {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #C3C3C9;
-    // margin: 2rem;
+.header_display > .side_section,
+.logo > img {
+  padding: 0.5rem 3rem;
 }
 
+.header_option > p,
+img,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #c3c3c9;
+  margin-right: 5px;
+}
+.side_section > p {
+  height: 1.75rem;
+  border-right: 2px solid #c3c3c9;
+  margin-right: 10px;
+}

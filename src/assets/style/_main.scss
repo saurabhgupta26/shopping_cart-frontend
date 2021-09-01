@@ -1,3 +1,25 @@
 .dash_background {
     color: lightgrey;
 }
+
+.main {
+    background-color: lightgrey;
+    width: 100%;
+}
+
+.main > .product_info {
+    background-color: #fff;
+    // width: 100%;
+    padding:3rem;
+}
+
+.product {
+    padding: 2rem;
+    // margin: 2rem;
+}
+
+.main > .heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+

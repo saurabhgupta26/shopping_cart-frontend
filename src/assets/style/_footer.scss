@@ -1,0 +1,31 @@
+.divider {
+    border-left: 1px solid #fff;
+    height: auto;
+}
+
+.footer_background {
+    background-color: #212121;
+
+}
+
+.text-white > .h5 {
+    font-weight: 600;
+}
+
+.foot_timing {
+    width: 240px;
+}
+
+.foot_phone {
+    padding: 1rem 0;
+}
+
+.foot_phone > h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: .5rem;
+}
+.foot_phone > img {
+    object-fit: contain;
+}
