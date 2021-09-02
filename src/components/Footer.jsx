@@ -4,7 +4,7 @@ import Phone from "../assets/icons/phone.png";
 export default function Footer() {
   return (
     <div className="footer_background">
-      <div className="container d-flex justify-content-between footer_background p-3">
+      <div className="container d-flex justify-content-around footer_background p-3">
         <div className="text-white">
           <p className="h5">LOREM</p>
           <p className="h7 pt-1 pb-1">Dummy</p>
@@ -51,7 +51,7 @@ export default function Footer() {
 
         <div className="divider"></div>
 
-        <div className="text-white">
+        <div className="text-white px-3">
           <p className="h5">CALL US</p>
           <div className="d-flex justify-content-between flex-wrap foot_timing">
             <p className="h7">
@@ -68,7 +68,7 @@ export default function Footer() {
 
           <div className="border border-top-2 border-white"></div>
 
-          <h4 className="email h4">support.us@test.com</h4>
+          <h4 className="email h4 text-center">support.us@test.com</h4>
         </div>
       </div>
       <div className="container footer_end">
@@ -82,7 +82,9 @@ export default function Footer() {
           <p></p>
           <h6>Dummy</h6>
         </div>
-        <h6 className="footer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta?</h6>
+        <h6 className="footer_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta?
+        </h6>
       </div>
     </div>
   );

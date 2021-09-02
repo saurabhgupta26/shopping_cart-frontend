@@ -27,26 +27,38 @@
   }
 }
 .footer_end {
+  background-color: #212121;
   p {
     height: 1rem;
-    border-right: 2px solid #c3c3c9;
+    border-right: 2px solid #fff;
     margin: 0 10px;
   }
   h6 {
     color: #fff;
+    line-height: 1.2;
+    font-weight: 600;
     font-size: 1rem;
-    font-weight: 300;
+    // font-weight: 300;
   }
   .border {
     margin: 2rem 0;
   }
-}
-.footer_end {
-  background-color: #212121;
 }
 .footer_text {
   text-align: right;
   color: #fff;
   padding-top: 1rem;
   padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_end {
+    padding: 0;
+    padding: 10px;
+  }
+  .footer_background {
+    .text-white:nth-child(1), .text-white:nth-child(2) {
+      display:none;
+    }
+  }
 }

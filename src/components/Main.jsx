@@ -101,7 +101,7 @@ export default function Main() {
           <p>Shop for $5000 or more and get 10% discount on your order</p>
         </div>
 
-        <h3 className="h1 heading py-3 px-2"> Shopping Cart </h3>
+        <h3 className="h1 heading p-5"> Shopping Cart </h3>
         <div className="container cart_background ">
           <div className="product_info">
             <div className="d-flex justify-content-between my-3 bg-light py-3">
@@ -119,7 +119,11 @@ export default function Main() {
                 <div>
                   <div className="d-flex justify-content-between my-4">
                     <div className="product_data t_head d-flex align-items-center">
-                      <img src={item.imageUrl} alt="img1" />
+                      <img
+                        className="img-fluid"
+                        src={item.imageUrl}
+                        alt="img1"
+                      />
                       <div>
                         <p className="bg-dark text-white d-inline-block p-1">
                           {item.tagline}
@@ -140,26 +144,30 @@ export default function Main() {
                       <div className="quantity_update d-flex align-items-center">
                         <a onClick={() => qtyDecHandler(item.id)}>
                           {item.qty > 0 ? (
-                            <img src={IconAM} alt="-" />
+                            <img className="img-fluid" src={IconAM} alt="-" />
                           ) : (
-                            <img src={IconM} alt="-" />
+                            <img className="img-fluid" src={IconM} alt="-" />
                           )}
                         </a>
 
                         <label className="bg-light p-2">{item.qty}</label>
                         <a onClick={() => qtyIncHandler(item.id)}>
-                          <img src={IconP} alt="+" />
+                          <img className="img-fluid" src={IconP} alt="+" />
                         </a>
                       </div>
                       <p>{item.qty * item.price} $</p>
                       <a onClick={() => itemDeleteHandler(item.id)}>
-                        <img src={Delete} alt="del" />
+                        <img className="img-fluid" src={Delete} alt="del" />
                       </a>
                     </div>
                   </div>
                   {item.gift && item.qty > 0 ? (
                     <div className=" bg-light my-3 d-flex p-5 mx-5">
-                      <img src={item.gift.imageUrl} alt="gift" />
+                      <img
+                        className="img-fluid"
+                        src={item.gift.imageUrl}
+                        alt="gift"
+                      />
                       <div>
                         <h5 className="bg-dark text-white d-inline-block">
                           GIFT
@@ -181,7 +189,7 @@ export default function Main() {
           {/* Main 2nd section */}
           <section className="order_summary">
             <div className="d-flex justify-content-between px-5">
-              <div className="d-inline-block w-40">
+              <div className="d-inline-block w-50">
                 <div className="delivery_check">
                   <h4>Delivery Availability</h4>
                   {/* <div className="d-flex justify-content-between"> */}
@@ -189,7 +197,7 @@ export default function Main() {
                     className="d-flex justify-content-between my-2"
                     onSubmit={handlePincode}
                   >
-                    <img src={Location} alt="location" />
+                    <img className="img-fluid" src={Location} alt="location" />
                     <input
                       type="text"
                       name="pincode"
@@ -203,15 +211,19 @@ export default function Main() {
                       className="text-primary border-0 bg-transparent"
                       value="CHANGE"
                     />
-                  </form>                  
+                  </form>
                   <hr />
-                  <div className="delivery_option d-flex justify-content-between my-4">
+                  <div className="d-flex justify-content-between my-4">
                     {isValid ? (
                       <>
-                        {" "}
                         <div className="d-flex justify-content-between">
                           {!pinData.deliveryPrice ? (
-                            <img src={Tick} alt="tick" />
+                            <img
+                              className="img-fluid"
+                              src={Tick}
+                              alt="tick"
+                              className="img-fluid"
+                            />
                           ) : (
                             <></>
                           )}
@@ -220,7 +232,7 @@ export default function Main() {
                         </div>
                         <div className="d-flex justify-content-between">
                           {pinData.cashOnDelivery ? (
-                            <img src={Tick} alt="tick" />
+                            <img className="img-fluid" src={Tick} alt="tick" />
                           ) : (
                             <></>
                           )}
@@ -228,12 +240,12 @@ export default function Main() {
                         </div>
                         <div className="d-flex justify-content-between">
                           {pinData.estimatedDays ? (
-                            <img src={Tick} alt="tick" />
+                            <img className="img-fluid" src={Tick} alt="tick" />
                           ) : (
                             <></>
                           )}
                           <p className="h7 w-100">
-                            Estimated delivery time is
+                            Estimated delivery time <br /> is {" "}
                             {pinData.estimatedDays.min}-
                             {pinData.estimatedDays.max} days
                           </p>
@@ -260,13 +272,12 @@ export default function Main() {
                     {" "}
                     {pinData && pinData.deliveryPrice !== 0
                       ? pinData.deliveryPrice + " $"
-                      : "Free"}{" "}
+                      : "Free"}
                   </p>
                 </div>
                 <div className="d-flex justify-content-between my-5">
                   <p>Order Total</p>
                   <p className="bolder text-dark h4">
-                    {" "}
                     {subTotal -
                       discount +
                       (pinData && pinData.deliveryPrice
