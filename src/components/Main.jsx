@@ -151,7 +151,7 @@ export default function Main() {
                           <img src={IconP} alt="+" />
                         </a>
                       </div>
-                      <p>{item.qty * item.price}</p>
+                      <p>{item.qty * item.price} $</p>
                       <a onClick={() => itemDeleteHandler(item.id)}>
                         <img src={Delete} alt="del" />
                       </a>
@@ -171,13 +171,11 @@ export default function Main() {
                     </div>
                   ) : (
                     <> </>
-                    )}
-                    <hr />
+                  )}
+                  <hr />
                 </div>
               );
-            }
-            )
-          }
+            })}
           </div>
 
           {/* Main 2nd section */}
@@ -205,8 +203,7 @@ export default function Main() {
                       className="text-primary border-0 bg-transparent"
                       value="CHANGE"
                     />
-                  </form>
-                  {/* </div> */}
+                  </form>                  
                   <hr />
                   <div className="delivery_option d-flex justify-content-between my-4">
                     {isValid ? (
@@ -236,8 +233,8 @@ export default function Main() {
                             <></>
                           )}
                           <p className="h7 w-100">
-                            Estimated delivery time is{" "}
-                            {pinData.estimatedDays.min} -{" "}
+                            Estimated delivery time is
+                            {pinData.estimatedDays.min}-
                             {pinData.estimatedDays.max} days
                           </p>
                         </div>
