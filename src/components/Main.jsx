@@ -245,7 +245,7 @@ export default function Main() {
                             <></>
                           )}
                           <p className="h7 w-100">
-                            Estimated delivery time <br /> is {" "}
+                            Estimated delivery time <br /> is{" "}
                             {pinData.estimatedDays.min}-
                             {pinData.estimatedDays.max} days
                           </p>
@@ -286,12 +286,12 @@ export default function Main() {
                     $
                   </p>
                 </div>
-                <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-between align-items-center flex-wrap">
                   <a href="##" className="text-primary bold">
                     CONTINUE SHOPPING
                   </a>
                   <button
-                    className="btn btn-primary px-4 py-3 bold rounded-pill"
+                    className="btn btn-primary px-4 py-3 bold rounded-pill btn-sm active"
                     disabled={isValid && subTotal === 0}
                     onClick={(e) => {
                       e.preventDefault();

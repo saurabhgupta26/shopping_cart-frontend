@@ -4,7 +4,7 @@ import Phone from "../assets/icons/phone.png";
 export default function Footer() {
   return (
     <div className="footer_background">
-      <div className="container d-flex justify-content-around footer_background p-3">
+      <div className="container d-flex justify-content-around flex-wrap footer_background p-3">
         <div className="text-white">
           <p className="h5">LOREM</p>
           <p className="h7 pt-1 pb-1">Dummy</p>
