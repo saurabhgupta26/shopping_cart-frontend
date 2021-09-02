@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Data from "../assets/data/data.json";
+import data from "../assets/data/data.json";
 import IconP from "../assets/icons/plus.png";
 import IconAM from "../assets/icons/minus-active.png";
 import IconM from "../assets/icons/minus.png";
 import Delete from "../assets/icons/DELETE.png";
 import Location from "../assets/icons/LOCATION.png";
 import Tick from "../assets/icons/check.png";
-import { nodeInternals } from "stack-utils";
 
 export default function Main() {
   const persistDataInLocalStorage = JSON.parse(
@@ -20,7 +19,7 @@ export default function Main() {
   const [pinData, setPinData] = useState(null);
 
   useEffect(() => {
-    const mappedProduct = Data.products.reduce((acc, item) => {
+    const mappedProduct = data.products.reduce((acc, item) => {
       acc[item.id] = {
         ...item,
         qty: 0,
@@ -28,7 +27,7 @@ export default function Main() {
       return acc;
     }, {});
     setProducts(persistDataInLocalStorage?.products ?? mappedProduct);
-    setPinData(Data.pincode["560067"]);
+    setPinData(data.pincode["560067"]);
     setIsValid(persistDataInLocalStorage?.isValid ?? true);
     setSubTotal(persistDataInLocalStorage?.subTotal ?? 0);
     setDiscount(persistDataInLocalStorage?.discount ?? 0);
@@ -40,17 +39,17 @@ export default function Main() {
 
   useEffect(() => {
     setDiscount(
-      subTotal > Data.discount.minTotal
-        ? (subTotal * Data.discount.discountPercentage) / 100
+      subTotal > data.discount.minTotal
+        ? (subTotal * data.discount.discountPercentage) / 100
         : 0
     );
   }, [subTotal]);
 
   const handlePincode = (e) => {
     e.preventDefault();
-    if (pincode in Data.pincode) {
+    if (pincode in data.pincode) {
       setIsValid(true);
-      setPinData(Data.pincode[pincode]);
+      setPinData(data.pincode[pincode]);
     } else {
       setIsValid(false);
     }
@@ -111,6 +110,7 @@ export default function Main() {
                 <p className="h6 ">Price</p>
                 <p className="h6 ">Quantity</p>
                 <p className="h6 ">Subtotal</p>
+                <p></p>
               </div>
             </div>
 
@@ -128,8 +128,7 @@ export default function Main() {
                         <p>{item.desc}</p>
                         {item.planLink ? (
                           <a href={item.planLink} className="d-block">
-                            {" "}
-                            View Plans{" "}
+                            View Plans
                           </a>
                         ) : (
                           <> </>
@@ -172,11 +171,13 @@ export default function Main() {
                     </div>
                   ) : (
                     <> </>
-                  )}
+                    )}
+                    <hr />
                 </div>
               );
-            })}
-            <hr />
+            }
+            )
+          }
           </div>
 
           {/* Main 2nd section */}
