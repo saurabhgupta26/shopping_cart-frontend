@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="shadow_box">
+    <div className="shadow_box smview">
       <div className="container-1 d-flex justify-content-between align-items-start px-4">
         <div className="circle_display">
           <div className="circle">

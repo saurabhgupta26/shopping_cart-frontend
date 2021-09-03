@@ -46,6 +46,9 @@
 .order_summary {
     margin: 3rem 0;
     padding: 3rem 0;
+    img {
+      object-fit: contain;
+     }
 }
 
 .w-40 {
@@ -53,8 +56,12 @@
 }
 
 @media screen and (max-width: 375px) {
-  // .main_total {
-  //   display: none;
-  //   border: 2px solid green;
-  // }
-}
+  .smview {
+    display: none;
+  }
+  .smviewb {
+    display: block;
+  }
+
+
+  }

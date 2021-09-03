@@ -97,7 +97,7 @@ export default function Main() {
   return (
     <div className="main">
       <div className="container">
-        <div className="offer_tag">
+        <div className="offer_tag smview">
           <p>Shop for $5000 or more and get 10% discount on your order</p>
         </div>
 
@@ -125,13 +125,15 @@ export default function Main() {
                         alt="img1"
                       />
                       <div>
-                        <p className="bg-dark text-white d-inline-block p-1">
-                          {item.tagline}
-                        </p>
+                        {item.tagline ? (
+                          <p className="smview bg-dark text-white d-inline-block p-1">
+                            {item.tagline}
+                          </p>
+                        ) : null}
                         <h2>{item.name}</h2>
-                        <p>{item.desc}</p>
+                        <p className="smview">{item.desc}</p>
                         {item.planLink ? (
-                          <a href={item.planLink} className="d-block">
+                          <a href={item.planLink} className="d-block smview">
                             View Plans
                           </a>
                         ) : (
@@ -155,8 +157,11 @@ export default function Main() {
                           <img className="img-fluid" src={IconP} alt="+" />
                         </a>
                       </div>
-                      <p>{item.qty * item.price} $</p>
-                      <a onClick={() => itemDeleteHandler(item.id)}>
+                      <p className="smview">{item.qty * item.price} $</p>
+                      <a
+                        className="smview"
+                        onClick={() => itemDeleteHandler(item.id)}
+                      >
                         <img className="img-fluid" src={Delete} alt="del" />
                       </a>
                     </div>
@@ -189,7 +194,7 @@ export default function Main() {
           {/* Main 2nd section */}
           <section className="order_summary">
             <div className="d-flex justify-content-between px-5">
-              <div className="d-inline-block w-50">
+              <div className="d-inline-block w-40">
                 <div className="delivery_check">
                   <h4>Delivery Availability</h4>
                   {/* <div className="d-flex justify-content-between"> */}
@@ -197,15 +202,21 @@ export default function Main() {
                     className="d-flex justify-content-between my-2"
                     onSubmit={handlePincode}
                   >
-                    <img className="img-fluid" src={Location} alt="location" />
-                    <input
-                      type="text"
-                      name="pincode"
-                      id=""
-                      placeholder="110003"
-                      value={pincode}
-                      onChange={(e) => setPincode(e.target.value)}
-                    />
+                    <div className="d-flex justify-content-between">
+                      <img
+                        className="img-fluid"
+                        src={Location}
+                        alt="location"
+                      />
+                      <input
+                        type="text"
+                        name="pincode"
+                        id=""
+                        placeholder="110003"
+                        value={pincode}
+                        onChange={(e) => setPincode(e.target.value)}
+                      />
+                    </div>
                     <input
                       type="submit"
                       className="text-primary border-0 bg-transparent"
@@ -245,7 +256,7 @@ export default function Main() {
                             <></>
                           )}
                           <p className="h7 w-100">
-                            Estimated delivery time <br /> is{" "}
+                            Estimated delivery time is{" "}
                             {pinData.estimatedDays.min}-
                             {pinData.estimatedDays.max} days
                           </p>

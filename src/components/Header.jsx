@@ -12,7 +12,7 @@ export default function Header() {
           <img src={Logo} alt="img" />
         </a>
         <div className="side_section d-flex justify-content-between align-items-center">
-          <a href="##">
+          <a href="##" className="smview">
             <h4>Track Order</h4>
           </a>
           <p></p>
