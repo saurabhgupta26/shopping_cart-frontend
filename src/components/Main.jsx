@@ -194,21 +194,22 @@ export default function Main() {
           {/* Main 2nd section */}
           <section className="order_summary">
             <div className="d-flex justify-content-between px-5">
-              <div className="d-inline-block w-40">
+              <div className="d-inline-block w-40 smviewb">
                 <div className="delivery_check">
                   <h4>Delivery Availability</h4>
                   {/* <div className="d-flex justify-content-between"> */}
                   <form
-                    className="d-flex justify-content-between my-2"
+                    className="d-sm-flex justify-content-between my-2 form-control"
                     onSubmit={handlePincode}
                   >
-                    <div className="d-flex justify-content-between">
+                    <div className="d-sm-flex justify-content-between">
                       <img
                         className="img-fluid"
                         src={Location}
                         alt="location"
                       />
                       <input
+                        className="form-contol form-control-sm"
                         type="text"
                         name="pincode"
                         id=""
@@ -269,15 +270,15 @@ export default function Main() {
 
               <div className="main_total d-inline-block w-40">
                 <h5 className="h5 bold">Order Summary ({noOfItems()} items)</h5>
-                <div className="d-flex justify-content-between my-4">
+                <div className="d-sm-flex justify-content-between my-4">
                   <p>Subtotal</p>
                   <p> {subTotal} $</p>
                 </div>
-                <div className="d-flex justify-content-between my-4">
+                <div className="d-sm-flex justify-content-between my-4">
                   <p>Total Discount</p>
                   <p> {discount} $</p>
                 </div>
-                <div className="d-flex justify-content-between my-4">
+                <div className="d-sm-flex justify-content-between my-4">
                   <p>Standard Shipping</p>
                   <p>
                     {" "}
@@ -286,7 +287,7 @@ export default function Main() {
                       : "Free"}
                   </p>
                 </div>
-                <div className="d-flex justify-content-between my-5">
+                <div className="d-sm-flex justify-content-between my-5">
                   <p>Order Total</p>
                   <p className="bolder text-dark h4">
                     {subTotal -
@@ -297,7 +298,7 @@ export default function Main() {
                     $
                   </p>
                 </div>
-                <div className="d-flex justify-content-between align-items-center flex-wrap">
+                <div className="d-sm-flex justify-content-between align-items-center flex-wrap">
                   <a href="##" className="text-primary bold">
                     CONTINUE SHOPPING
                   </a>
